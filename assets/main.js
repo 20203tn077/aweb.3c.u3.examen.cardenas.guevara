@@ -3,11 +3,13 @@ var modalModificar = new bootstrap.Modal(document.getElementById('modalModificar
 var modalEliminar = new bootstrap.Modal(document.getElementById('modalEliminar'), {});
 
 var lista = [];
+
+//Registro de muestra
 lista.push({
-    "nombre":"Pepe",
-    "apellido1":"Pecas",
-    "apellido2":"Pecas2",
-    "pokemon":"Charmander"
+    "nombre":"Ricardo",
+    "apellido1":"Cárdenas",
+    "apellido2":"Guevara",
+    "pokemon":"charmander"
 });
 
 function contenido(){
