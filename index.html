@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemones</title>
+    <link rel="stylesheet" href="/assets/bootstrap.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <button class="btn btn-success" onclick="mostrarNuevo()">Agregar registro</button>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Pokemon Favorito</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="contenido">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal nuevo registro -->
+
+    <div class="modal fade" tabindex="-1" id="modalNuevo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row gy-3">
+                        <div class="col-12">
+                            <label class="form-label">Nombre:</label>
+                            <input class="form-control" type="text" id="modalNuevo_nombre">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Primer apellido:</label>
+                            <input class="form-control" type="text" id="modalNuevo_apellido1">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Segundo apellido:</label>
+                            <input class="form-control" type="text" id="modalNuevo_apellido2">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Pokemon favorito:</label>
+                            <select class="form-select" id="modalNuevo_select"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="registrar()">registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal modificar -->
+
+    <div class="modal fade" tabindex="-1" id="modalModificar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modificar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row gy-3">
+                        <div class="col-12">
+                            <label class="form-label">Nombre:</label>
+                            <input class="form-control" type="text" id="modalModificar_nombre">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Primer apellido:</label>
+                            <input class="form-control" type="text" id="modalModificar_apellido1">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Segundo apellido:</label>
+                            <input class="form-control" type="text" id="modalModificar_apellido2">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Pokemon favorito:</label>
+                            <select class="form-select" id="modalModificar_select"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="modalModificar_botonModificar">Modificar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal eliminar -->
+
+    <div class="modal fade" tabindex="-1" id="modalEliminar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Deseas eliminar a <span id="modalEliminar_nombre"></span>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="modalEliminar_botonEliminar">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/assets/bootstrap.bundle.js"></script>
+    <script src="/assets/main.js"></script>
+</body>
+
+</html>
